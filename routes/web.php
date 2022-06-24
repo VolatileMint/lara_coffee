@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// laravelのテスト (http://localhost/lara_coffee/public/hello)
+Route::get('/hello', function () {
+    return 'hello';
+});
+// コントローラーテスト
+Route::get('/test', 'App\Http\Controllers\TestController@index');
+// ビューテスト
+Route::get('/testHello', 'App\Http\Controllers\TestController@viewTest');
