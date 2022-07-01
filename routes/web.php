@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+// LoginController を使うことを明示
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+/*
 // laravelのテスト (http://localhost/lara_coffee/public/hello)
 Route::get('/hello', function () {
     return 'hello';
@@ -24,3 +28,10 @@ Route::get('/hello', function () {
 Route::get('/test', 'App\Http\Controllers\TestController@index');
 // ビューテスト
 Route::get('/testHello', 'App\Http\Controllers\TestController@viewTest');
+*/
+
+//
+Route::get('/', [LoginController::class, 'index']);
+Route::get('/index', [LoginController::class, 'index']);
+// form受け取り
+Route::post('/login_check', [LoginController::class, 'loginCheck']);

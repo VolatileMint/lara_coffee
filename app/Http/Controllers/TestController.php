@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+// データのやり取りをする為のもの
 use Illuminate\Http\Request;
 
 class TestController extends Controller
