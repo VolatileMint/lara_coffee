@@ -80,5 +80,22 @@ git push -u origin main
 php artisan make:controller TestController
 ```
 
+モデル(とマイグレーションファイル)の作成コマンド
+
+```
+php artisan make:model UsersModel --migration
+```
+
+マイグレーションファイルにテーブルの定義とかを書くっぽい
+
+テーブル作成コマンド(database/migrations配下のファイルに従って作成される)
+```
+php artisan migrate 
+```
+
+
+
 ### 参考サイト
-[laravel基本操作](https://tech-blog.rakus.co.jp/entry/20201203/laravel#Laravel%E3%81%AE%E5%9F%BA%E6%9C%AC%E6%A9%9F%E8%83%BD%E7%A2%BA%E8%AA%8D)
+- [laravel基本操作](https://tech-blog.rakus.co.jp/entry/20201203/laravel#Laravel%E3%81%AE%E5%9F%BA%E6%9C%AC%E6%A9%9F%E8%83%BD%E7%A2%BA%E8%AA%8D)
+- [db接続とデータ取得](https://snome.jp/framework/laravel-connect-db/)
+- [モデル作成とマイグレーション](http://taustation.com/laravel-model-and-migration/)
