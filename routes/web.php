@@ -35,3 +35,4 @@ Route::get('/', [LoginController::class, 'index']);
 Route::get('/index', [LoginController::class, 'index']);
 // form受け取り
 Route::post('/login_check', [LoginController::class, 'loginCheck']);
+Route::get('/login_check', [LoginController::class, 'modelTest']);

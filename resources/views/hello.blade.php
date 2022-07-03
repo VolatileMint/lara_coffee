@@ -6,6 +6,9 @@
   <title>Document</title>
 </head>
 <body>
-  {{$message}}
+  {{ $value['id'] }}
+  {{ $value['name'] }}
+  {{ $value['email'] }}
+  {{ $value['passwd'] }}
 </body>
 </html>
